@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+h3 {
+  color: hsl(238, 29%, 16%);
+  font-size: 0.8rem;
+  font-weight: 400;
+  transition: color 0.2s ease-in;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.container:hover h3 {
+  color: hsl(14, 88%, 65%);
+}
+
+.faq-card {
+  border-radius: 2rem;
+  width: 90%;
+  padding: 0rem 2rem 2rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-mobile-woman-container {
+  width: 100%;
+  height: 15vh;
+  position: relative;
+  background: url("../images/bg-pattern-mobile.svg") no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-mobile-woman-container img {
+  position: absolute;
+}
+
+.faq-desktop-woman-container,
+.faq-desktop-box-container {
+  display: none;
+}
+
+.faq-mobile-woman {
+  top: -6.5rem;
+  transform: translateX(-0.8rem);
+  z-index: 2;
+}
+
+.faq-mobile-pattern {
+  width: 80%;
+  top: -2rem;
+  z-index: 1;
+}
+
+.faq-title {
+  padding: 1rem 0;
+}
+
+.faq-content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-question {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 1rem 0;
+  width: 100%;
+  height: 2.7rem;
+  overflow: hidden;
+}
+
+.faq-question.active {
+  height: auto;
+  overflow: unset;
+}
+
+.faq-question.active h3 {
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding-top: 1rem;
+}
+
+.faq-answer p {
+  color: hsl(240, 6%, 50%);
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .faq-card {
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 500px;
+    width: 65%;
+    position: relative;
+  }
+
+  .faq-content {
+    width: 45%;
+    padding-right: 8rem;
+    align-items: flex-start;
+  }
+
+  .faq-mobile-woman-container {
+    display: none;
+  }
+  .faq-desktop-box-container {
+    display: block;
+  }
+
+  .faq-desktop-woman-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
+    background-position-x: -36rem;
+    background-position-y: 65%;
+  }
+
+  .faq-desktop-woman {
+    position: absolute;
+    left: -85px;
+  }
+
+  .faq-desktop-box {
+    position: absolute;
+    top: 43%;
+    left: -6.5rem;
+  }
+}
