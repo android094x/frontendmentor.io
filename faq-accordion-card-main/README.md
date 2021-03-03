@@ -1,5 +1,7 @@
 # Frontend Mentor - FAQ Accordion Card
 
+[Preview here](https://faq-accordion-card-beta-seven.vercel.app/) 
+
 ![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
